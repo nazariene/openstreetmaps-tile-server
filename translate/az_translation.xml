@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<translations>
+    <translation>
+        <name>Azerbaijan translation</name>
+        <description>
+            Set all "name" tag values to appropriate "name:az" value.
+        </description>
+        <match mode="or">
+            <tag k="name:az" match_id="translation" v=".*"/>
+        </match>
+        <output>
+            <copy-all/>
+            <tag k="name" from_match="translation" v="{0}"/>
+        </output>
+    </translation>
+    <translation>
+        <name>English translation</name>
+        <description>
+            Use english translation if Azerbaijan translation is not present
+        </description>
+        <match mode="and">
+            <tag k="name:en" match_id="tag_en" v=".*"/>
+            <notag k="name:az" match_id="notag_az" v=".*"/>
+        </match>
+        <output>
+            <copy-all/>
+            <tag k="name" from_match="tag_en" v="{0}"/>
+        </output>
+    </translation>
+    <translation>
+        <name>Alternative name: English translation</name>
+        <description>
+            Set alternative name for locations: Use english translation
+        </description>
+        <match mode="and">
+            <tag k="name:az" match_id="tag_az" v=".*"/>
+            <tag k="name:en" match_id="tag_en" v=".*"/>
+            <notag k="alt_name" match_id="notag_alt" v=".*"/>
+            <notag k="alt_name:en" match_id="notag_alt_en" v=".*"/>
+        </match>
+        <output>
+            <copy-all/>
+            <tag k="alt_name" from_match="tag_en" v="{0}"/>
+        </output>
+    </translation>
+    <translation>
+        <name>Remove Armenian names</name>
+        <description>
+            Remove all name:hy tags
+        </description>
+        <match mode="or">
+            <tag k="name:hy" match_id="translation" v=".*"/>
+        </match>
+        <output>
+            <copy-unmatched/>
+        </output>
+    </translation>
+    <translation>
+        <name>Remove Armenian alternative names</name>
+        <description>
+            Remove all alt_name:hy tags
+        </description>
+        <match mode="or">
+            <tag k="alt_name:hy" match_id="translation" v=".*"/>
+        </match>
+        <output>
+            <copy-unmatched/>
+        </output>
+    </translation>
+</translations>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<translations>
+  <translation>
+    <name>Russian translation</name>
+    <description>
+      Set all "name" tag values to appropriate "name:ru" value.
+    </description>
+    <match mode="or">
+      <tag k="name:ru" match_id="translation" v=".*"/>
+    </match>
+    <output>
+      <copy-all/>
+      <tag k="name" from_match="translation" v="{0}"/>
+    </output>
+  </translation>
+  <translation>
+    <name>English translation</name>
+    <description>
+      Use english translation if Russian translation is not present
+    </description>
+    <match mode="and">
+      <tag k="name:en" match_id="tag_en" v=".*"/>
+      <notag k="name:ru" match_id="notag_ru" v=".*"/>
+    </match>
+    <output>
+      <copy-all/>
+      <tag k="name" from_match="tag_en" v="{0}"/>
+    </output>
+  </translation>
+</translations>
