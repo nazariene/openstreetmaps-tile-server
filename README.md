@@ -24,3 +24,8 @@ Prerendering might take a VERY long time and eat-up all your CPU and RAM. Stay f
 
 
 # Docs
+[General Info](https://github.com/nazariene/openstreetmaps-tile-server/blob/master/docs/osm_general_info.md)
+
+[Transform map before loading to postgresql](https://github.com/nazariene/openstreetmaps-tile-server/blob/master/docs/transform_osm_data_osmosis.md)
+
+[Transform map during loading to postgresql](https://github.com/nazariene/openstreetmaps-tile-server/blob/master/docs/transform_osm_data_carto.md)
