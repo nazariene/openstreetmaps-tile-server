@@ -12,7 +12,7 @@ tar --lzop -cf /opt/postgres.tar.lzop postgres
 rm -rf /data/database
 
 #Archive rendered tiles
-if [ -d "/data/tiles/defaults" ]; then
+if [ -d "/data/tiles/default" ]; then
   cd /data/tiles
   tar --lzop -cf /opt/tiles.tar.lzop default
   rm -rf /data/tiles

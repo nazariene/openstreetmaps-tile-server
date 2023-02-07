@@ -6,4 +6,4 @@ set -x
 /scripts/unpack_data.sh
 
 #/bin/bash
-/run.sh run
+THREADS=12 /run.sh run
